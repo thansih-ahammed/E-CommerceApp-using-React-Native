@@ -1,10 +1,15 @@
-import { View, Text } from 'react-native'
+import { View, Text,Button } from 'react-native'
 import React from 'react'
 
-export default function Home() {
+
+export default function Home({navigation}) {
   return (
     <View>
-      <Text>Home</Text>
+         <Button
+        title="Go to Cart"
+        onPress={() => navigation.navigate('CartScreen')}
+      />
+      <Button title='Go Back' onPress={()=> navigation.navigate.goBack()} />
     </View>
   )
 }
